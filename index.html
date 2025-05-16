@@ -45,8 +45,8 @@
 
     async function loadAlertLog() {
       try {
-        const res = await fetch('https://api.github.com/gists/YOUR_GIST_ID', {
-          headers: { Authorization: 'token YOUR_PAT_HERE' }
+        const res = await fetch('https://api.github.com/gists/cc77ca8c82ed2627b2ea5d57e4743efa', {
+          headers: { Authorization: 'token cc77ca8c82ed2627b2ea5d57e4743efa' }
         });
         const gist = await res.json();
         const alerts = JSON.parse(gist.files['sent_alerts.json'].content);
@@ -57,7 +57,7 @@
     }
 
     async function updateConfig(newConfig) {
-      const res = await fetch('https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/config.json', {
+      const res = await fetch('https://api.github.com/repos/claytonsweather/ULTRAnotifications/contents/config.json', {
         method: 'PUT',
         headers: {
           'Authorization': 'token YOUR_PAT_HERE',
